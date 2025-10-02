@@ -1,0 +1,653 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+    perspective: 2000px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+header{
+    width: 100vw;
+    font-size: 15px;
+}
+nav , .down{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+header ul , ul {
+    display: flex;
+    list-style-type: none;
+}
+header a , footer a{
+    text-decoration: none;
+    color: rgb(55, 54, 54);
+    padding: 0 8px;
+}
+header li ,li {
+    margin: 8px 3px;
+    position: relative;
+}
+.up li i:hover{
+    color: rgb(196, 12, 12);
+    transform: rotateY(180deg);
+}
+.up a::after{
+    position: absolute;
+    content: " ";
+    top: 0;
+    right: 0;
+    width: 1.5px;
+    height: 0;
+    transition: 1s;
+    background-color: rgb(196, 12, 12);  
+}
+.up a:hover::after{
+    height: 100%;
+}
+.up a::before{
+    position: absolute;
+    content: " ";
+    bottom: 0;
+    left: 0;
+    width: 1.5px;
+    height: 0;
+    transition: 1s;
+    background-color: rgb(196, 12, 12);
+}
+.up a:hover::before{
+    height: 100%;
+}
+.down img {
+    width: 100px;
+    height: 50px;
+}
+.down{
+    padding: 0px 58px 0px 65px;
+}
+.down a:hover{
+    color: rgb(196, 12, 12);
+}
+.down ul{
+    margin: 5px 0;
+}
+.down li {
+    padding: 5px 3px;
+}
+.down-1 .a-down::after{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    border-left: 1.5px solid rgb(196, 12, 12);
+    border-right: 1.5px solid rgb(196, 12, 12);
+    transition: 1s;
+    text-align: center;
+    box-sizing: border-box;  
+}
+.down-1 .a-down:hover::after{
+    width: 100%;
+    height: 100%;
+}
+.down-1 .a-down::before{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    border-top: 1.5px solid rgb(196, 12, 12);
+    border-bottom: 1.5px solid rgb(196, 12, 12);
+    transition: 1s;
+    text-align: center;
+    box-sizing: border-box;
+}
+.down-1 .a-down:hover::before{
+    width: 100%;
+    height: 100%;
+    
+}
+.pages{
+    position: relative;
+}
+.pages i{
+    font-size: 12px;
+    font-weight: bold;
+}
+.hidden-table{
+    position: absolute;
+    width: 270px;
+    text-align: left;
+    top: 30px;
+    left: -80px;
+    transform: scale(0,0);
+    transition: 1s;
+    background-color: white;
+    border: 0.5px solid rgb(165, 165, 165);
+    border-radius: 10px;
+}
+.pages:hover .hidden-table{
+    transform: scale(100%,100%);
+}
+table{  
+
+    width: 100%;
+}
+td , th{
+    padding: 3px 0px;
+    font-size: 15px;
+}
+.left{
+    padding-right: 5px;
+}
+th{
+    font-weight: 100;
+    font-size: 17px;
+    padding-left:8px ;
+    padding-bottom: 5px;  
+}
+table th a{
+    border-bottom: 1px dashed rgb(182, 178, 178);
+    padding: 0;
+    padding-bottom: 5px;
+    text-align: left;
+    letter-spacing: 1px;
+    color: rgb(103, 101, 101);
+}
+.sale{
+    text-align: center;
+    background-color: black;
+    text-transform: capitalize;
+    color: aliceblue;
+    padding: 5px 30px 5px 0px;
+    font-size: 15px;
+    
+}
+.shop-now{
+    color: rgb(188, 168, 133);
+    border-bottom: 1px solid rgb(188, 168, 133);
+    padding: 0px 0px 2px 0px;
+    text-decoration: none;
+}
+.shop-now:hover{
+    letter-spacing: 1px;
+}
+main{
+    width: 100vw;
+    height: 85.5vh;
+    background-image: url(../images/womens-clothing-store.jpg);
+    background-size: cover;
+}
+.main-contant h1{
+    font-weight: bolder;
+}
+.main-contant button{
+    width: 110px;
+    height: 45px;
+    margin: auto;
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    font-size: 14px;
+}
+.main-btn:hover{
+    color: black;
+    background-color: rgba(255, 255, 255, 0.594);
+    cursor: pointer;
+
+}
+.fashion{
+  font-family: "Italianno", cursive;
+  font-weight: 500;
+  font-size: 50px;
+  color: rgb(138, 36, 36);
+}
+.main-contant .contant{
+    font-size: 14px;
+    color: rgb(38, 37, 37);
+    padding-top: 5px;
+    width: 300px;
+    margin: auto;
+}
+.main-contant{
+    width: 350px;
+    height: 250px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  
+    margin: 150px 180px; 
+}
+/****************************** /main **********************************/
+.sec1 , section {
+    height: 75vh;
+    width: 100%;
+    padding: 55px 0;
+}
+.sec1-container  , .container{
+    width: 90%;
+    margin: auto;
+}
+.sec1-parent , .sec5-parent{
+    display: flex;
+    justify-content: space-between;
+}
+.sec1-item {
+    position: relative;
+    width: 30%;
+    height: 350px;
+    text-align: center;
+    background-color: antiquewhite;
+    overflow: hidden;
+}
+.sec1 img , .sec5 img{
+    width: 100%;
+    height: 370px;
+}
+.sec1 .shop-now{
+    font-weight: 800;
+}
+.sec1 h3{
+    margin-bottom: 20px;
+}
+.sec1-contant{
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    top: 300px;
+    padding-top: 10px;
+    background-color: rgba(240, 248, 255, 0.101);
+    background: -webkit-linear-gradient(bottom,rgba(0, 0, 0, 0.749),transparent);
+}
+.sec1-item:hover .sec1-contant{
+    transform: translateY(-40px);
+    transition: 1s;
+}
+.sec1-item:hover img{
+    transition: 1s;
+    transform: scale(1.13,1.13);
+}
+/************************** /sec1 ******************************/
+.sec2 , .sec4{
+    height: 92vh;
+}
+.sec2-content{
+    display: flex;
+    justify-content: space-between;  
+}
+.sec2 li{
+    margin-left: 10px;
+    font-size: 17px;
+    cursor: pointer;
+}
+.sec2 h2 , h2{
+    font-size: 30px;
+}
+.sec2 hr{
+    margin-top: -8px;
+}
+.sec2 .women{
+   color: rgb(196, 12, 12);
+   border-bottom: 2px solid rgb(196, 12, 12) ;
+   padding-bottom: 15px;
+}
+.sec2-items-parent , .sec4-items-parent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.sec2-item , .sec4-item{
+    width: 22%;
+    text-align: center;
+}
+.sec2-item h3 , .sec4-item h3 , .sec5-item h3{ 
+    margin-top: 55px;
+    font-size: 15px;
+}
+.sec2-item p , .sec4-item p{
+    color:rgb(135, 134, 134) ;
+    margin-top: 5px;
+}
+.sec2-item:hover h3 , .sec4-item:hover h3 , .sec5-item:hover h3{
+    color: rgb(196, 12, 12);
+}
+.sec2-item-parent , .sec4-item-parent{
+    position: relative;
+    height: 300px; 
+    padding:50px 0px;
+}
+.sec2-item img , .sec4-item img{
+    width: 100%;
+    height: 100%;
+}
+.sec2 .front , .sec2 .back , .sec4 .front , .sec4 .back{
+    width: 100%;
+    height: 100%;
+    position: absolute;    
+}
+.sec2 .icon , .sec4 .icon{
+    position: absolute;
+    width: 50%;
+    top: 95%;
+    left: 25%;
+    opacity: 0;
+    transition: 1s;
+    
+}
+.sec2-item:hover .icon , .sec4-item:hover .icon{
+    opacity: 1;
+    transform: translateY(-10px);
+}
+.sec2 .icon  i , .sec4 .icon i{
+    cursor: pointer;
+    color: rgb(23, 23, 23);
+    background-color: white;
+    line-height: 35px;
+    width: 33%;
+    margin-left: -6px;
+    transition: 1s;
+}
+.sec2 .icon i:hover , .sec4 .icon i:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(204, 37, 37);
+}
+.sec2 .back{
+    transition: all 1s;
+    transform-style: preserve-3d;
+    transform: rotateY(90deg);
+}
+.sec2-item-parent:hover .back{
+    transform: rotateY(180deg);
+}
+/************************************ /sec2 ****************************/
+.sec3{
+    background-color: rgb(231, 247, 247);
+    height: 60vh;
+    text-align: center;
+}
+.sec3-container {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.sec3 i , .sec4 i , .sec2 i{
+    margin-top: 11%;
+    font-size: 20px;
+    font-weight: bolder;
+    color: rgb(99, 96, 96);
+}
+.sec2 i , .sec4 i{
+    margin-top: 20%;
+}
+.sec3 p{
+    width: 65%;
+    margin: auto;
+ }
+ .sec3-parent {
+    height: 100%;
+    display: flex;
+    flex-direction:column ;
+    justify-content: space-between;
+ }
+.sec3 h2{
+    margin-bottom: 30px;  
+}
+.sec3-person{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    font-size: 13px;
+    width: 25%;
+    padding-top: 20px;
+}
+.sec3-person p{
+    width: fit-content;
+    display: block;
+    padding-top: 5px;
+}
+.sec3 .person-info{
+    text-align: left;
+    margin-top: 13px;
+}
+.sec3-person img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.sec3 p{
+    color: rgb(120, 120, 120);
+}
+/*************************** /sec3 *******************************/
+.sec4 , .sec5{
+    text-align: center;
+}
+.sec4-items-parent{
+    width: 100%;
+    padding-top: 20px;
+}
+.sec4-parent{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.sec4-item{
+    overflow: hidden;
+}
+.sec4 .front{
+    z-index: 1;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: 1s;
+}
+.sec4-item:hover .front{
+    transform: translateY(0);
+    opacity: 1;
+}
+.sec4 .icon{
+    z-index: 2;
+}
+/*************************** /sec4 ***************************/
+.sec5{
+    background-color: rgb(231, 247, 247);
+    height: 115vh;
+}
+.sec5-item{
+    width: 30%;
+    height: 350px;
+    text-align: left;
+}
+.sec5 img{
+    transform: scale(1,1);
+    transition: 0.5s;
+}
+.sec5-item:hover img{
+    transform: scale(1.04,1.04);
+}
+.sec5 h2{
+    margin-bottom: 30px;
+}
+.sec5-content , .sec6-content{
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.sec5-item h3 , .sec6 h3{
+    margin: 0;
+    cursor: pointer;
+}
+.sec5-item p , .sec6 p{
+    font-size: 13px;
+    color: rgb(75, 74, 74);
+}
+.sec5 a{
+    color: black;
+}
+/****************************** /sec5 *******************************/
+.sec6{
+    height: 35vh;
+}
+.sec6-parent{
+    display: flex;
+    justify-content: space-between;
+}
+.sec6-item{
+    width: 30%;
+    text-align: center;
+    position: relative;
+    margin-top: -30px;
+}
+.sec6 h3{
+    font-size: 16px;
+    cursor: text;
+}
+.sec6-icon{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; 
+    transform: translateY(40px);
+    height: 40px;
+    overflow: hidden;
+}
+.sec6-item:hover .up-icon , .sec6-item:hover .down-icon{
+    transform: translateY(-40px); 
+}
+.sec6-content{
+    margin-top: 90px;
+    height: 50px;   
+}
+.sec6 i{ 
+    font-size: 40px;
+    transition: 0.5s;
+}
+.sec6 .up-icon{
+    color: rgb(149, 147, 147);
+}
+.sec6 .down-icon{
+    color: rgb(30, 30, 92);
+}
+/********************************** /sec6 **********************************/
+footer{
+    height: 70vh;
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+}
+.footer-up{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px;
+}
+.up-1 p{
+    margin-top: 10px;
+    font-size: 13px;
+}
+.up-2 input , .up-2 button{
+    padding: 10px ;
+    font-size: 19px;
+    border-radius: 0;
+    border: none;
+}
+.up-2 button{
+    background-color:  rgb(196, 12, 12);
+    transition: 0.5s;
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;
+    padding: 10px 15px;
+}
+.up-2 input{
+    padding-right: 50px;
+}
+.up-2 button:hover{
+    transform: scale(1.1,1.1);
+}
+.up-3 i{
+    color: rgb(170, 169, 169);
+    font-size: 20px;
+    margin-top: 10px;
+}
+.up-3 i:hover{
+    color: white;
+    transform: scale(1.2,1.2);
+}
+footer hr{
+    background-color: rgb(114, 113, 113);
+    height: 0.5px;
+    border: none;  
+}
+.footer-center{
+    display: flex;
+    padding: 40px 0px 10px 0px ;
+    justify-content: space-between;
+}
+footer img{
+    width: 120px;
+    height: 70px;
+    border-radius: 20px;
+}
+.footer-center ul {
+    display: flex;
+    flex-direction: column;
+    width: 170px;
+    
+}
+.footer-center li{
+    margin: 0px 8px 15px 8px;
+    height: 20px;
+}
+.footer-center h3{
+    padding-left: 9px;
+    font-size: 17px;
+}
+.footer-center a{
+    transition: 0.5s;
+    color: rgb(179, 179, 179);
+     font-size: 13px;
+}
+.footer-center a:hover{
+    text-decoration: underline;
+    font-size: 15px;
+}
+.footer-down{
+    font-size: 13px;
+    color: rgb(179, 179, 179);
+    text-align:center ;
+    padding: 15px 0;
+}
+.footer-down a{
+    color: rgb(196, 12, 12) ;
+    text-decoration: underline;
+}
+.footer-down a:hover{
+    letter-spacing: 1px;
+}
+.footer-down  i{
+   
+    animation-name: heart;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+@keyframes heart{
+    50%{
+        color: rgb(196, 12, 12) ;
+        transform: scale(1.5,1.5);
+    }
+
+}
+
+
+
+
+
+
