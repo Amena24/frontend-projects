@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+
+  <title>Exam</title>
+
+</head>
+
+<body>
+  <section class="py-16 bg-[#EBF4F6] min-h-screen">
+    <div class="max-w-6xl mx-auto px-4">
+
+      <!--Timer -->
+
+      <div class="mb-6 w-fit text-sm md:text-base font-bold px-3 py-1.5 bg-[#09637E] text-white rounded-lg">
+        <span class="countdown font-mono text-2xl">
+          <span id="hours" style="--value:0;" aria-live="polite" aria-label="10"></span>
+          :
+          <span id="minutes" style="--value:9; --digits: 2;" aria-live="polite" aria-label="24"></span>
+          :
+          <span id="seconds" style="--value:59; --digits: 2;" aria-live="polite" aria-label="59"></span>
+        </span>
+      </div>
+
+
+      <div class="flex flex-col md:flex-row gap-6 lg:gap-8">
+
+
+        <div class="w-full md:w-3/5 lg:w-3/5">
+
+          <!-- Question Card -->
+          <div class="bg-white rounded-xl shadow-lg p-5 md:p-6">
+
+            <!-- Question Number -->
+            <div class="mb-4">
+              <!-- progress bar  -->
+              <div class="w-full bg-[#EBF4F6] rounded-full h-2.5 ">
+
+                <div class="bg-[#088395] h-2.5 rounded-full" style="width: 0%" id="progress"></div>
+              </div>
+
+            </div>
+
+
+            <!-- questions -->
+            <div class="w-full  overflow-hidden  ">
+              <div id="container" class=" flex ">
+                <!-- question1 -->
+                <div class="w-100  item h-80 hidden " answer="365">
+                  <p class="text-lg md:text-xl font-semibold text-[#1F2933] my-3">
+                    How many days are there in a normal year?
+                  </p>
+                  <!-- Answer Options -->
+                  <div class="space-y-3 mb-6">
+
+                    <!-- Option 1 -->
+                    <label
+                      class="  block p-3 border border-[#7AB2B2] bg-white rounded-lg cursor-pointer hover:bg-[#EBF4F6] transition-colors">
+
+                      <input type="radio" name="q1"
+                        class="radio radio-xs radio-success text-sm md:text-base text-[#1F2933]" value="365">365</input>
+                    </label>
+
+                    <!-- Option 2 -->
+                    <label
+                      class=" block p-3 border border-[#7AB2B2] bg-white rounded-lg cursor-pointer hover:bg-[#EBF4F6] transition-colors">
+
+                      <input type="radio" name="q1"
+                        class="radio radio-xs radio-success text-sm md:text-base text-[#1F2933]" value="366">366</input>
+                    </label>
+
+                    <!-- Option 3 -->
+                    <label
+                      class=" block p-3 border border-[#7AB2B2] bg-white rounded-lg cursor-pointer hover:bg-[#EBF4F6] transition-colors">
+
+                      <input type="radio" name="q1"
+                        class="radio radio-xs radio-success text-sm md:text-base text-[#1F2933]" value="350">350</input>
+                    </label>
+                    <!-- Option 4 -->
+                    <label
+                      class=" block p-3 border border-[#7AB2B2] bg-white rounded-lg cursor-pointer hover:bg-[#EBF4F6] transition-colors">
+
+                      <input type="radio" name="q1"
+                        class="radio radio-xs radio-success text-sm md:text-base text-[#1F2933]" value="360">360</input>
+                    </label>
+
+                  </div>
+                </div>
+                <!-- question2 -->
+                <div class="w-100 item h-80 hidden " answer="Lion">
+                  <p class="text-lg md:text-xl font-semibold text-[#1F2933] my-3">
+                    Which animal is known as the "King of the Jungle"?
+                  </p>
+                  <!-- Answer Options -->
+                  <div class="space-y-3 mb-6">
+
+                    <!-- Option 1 -->
+                    <label
+                      class=" block p-3 border border-[#7AB2B2] bg-white rounded-lg cursor-pointer hover:bg-[#EBF4F6] transition-colors">
+
+                      <input type="radio" name="q2"
+                        class="radio radio-xs radio-success text-sm md:text-base text-[#1F2933]"
+                        value="Elephant">Elephant</input>
+                    </label>
+
+                    <!-- Option 2 -->
+                    <label
+                      class=" block p-3 border border-[#7AB2B2] bg-white rounded-lg cursor-pointer hover:bg-[#EBF4F6] transition-colors">
+
+                      <input type="radio" name="q2"
+                        class="radio radio-xs radio-success text-sm md:text-base text-[#1F2933]"
+                        value="Lion">Lion</input>
+                    </label>
+
+                    <!-- Option 3 -->
+                    <label
+                      class=" block p-3 border border-[#7AB2B2] bg-white rounded-lg cursor-pointer hover:bg-[#EBF4F6] transition-colors">
+
+                      <input type="radio" name="q2"
+                        class="radio radio-xs radio-success text-sm md:text-base text-[#1F2933]"
+                        value="Tiger">Tiger</input>
+                    </label>
+                    <!-- Option 4 -->
+                    <label
+                      class=" block p-3 border border-[#7AB2B2] bg-white rounded-lg cursor-pointer hover:bg-[#EBF4F6] transition-colors">
+
+                      <input type="radio" name="q2"
+                        class="radio radio-xs radio-success text-sm md:text-base text-[#1F2933]"
+                        value="Giraffe">Giraffe</input>
+                    </label>
+
+                  </div>
+                </div>
+                <!-- question3 -->
+                <div class="w-100 item h-80 hidden " answer="Cold">
+                  <p class="text-lg md:text-xl font-semibold text-[#1F2933] my-3">
+                    What is the opposite of the word "Hot"?
+                  </p>
+                  <!-- Answer Options -->
+                  <div class="space-y-3 mb-6">
+
+                    <!-- Option 1 -->
+                    <label
+                      class=" block p-3 border border-[#7AB2B2] bg-white rounded-lg cursor-pointer hover:bg-[#EBF4F6] transition-colors">
+
+                      <input type="radio" name="q3"
+                        class="radio radio-xs radio-success text-sm md:text-base text-[#1F2933]"
+                        value="Warm">Warm</input>
+                    </label>
+
+                    <!-- Option 2 -->
+                    <label
+                      class=" block p-3 border border-[#7AB2B2] bg-white rounded-lg cursor-pointer hover:bg-[#EBF4F6] transition-colors">
+
+                      <input type="radio" name="q3"
+                        class="radio radio-xs radio-success text-sm md:text-base text-[#1F2933]" value="Ice">Ice</input>
+                    </label>
+
+                    <!-- Option 3 -->
+                    <label
+                      class=" block p-3 border border-[#7AB2B2] bg-white rounded-lg cursor-pointer hover:bg-[#EBF4F6] transition-colors">
+
+                      <input type="radio" name="q3"
+                        class="radio radio-xs radio-success text-sm md:text-base text-[#1F2933]"
+                        value="Cold">Cold</input>
+                    </label>
+                    <!-- Option 4 -->
+                    <label
+                      class=" block p-3 border border-[#7AB2B2] bg-white rounded-lg cursor-pointer hover:bg-[#EBF4F6] transition-colors">
+
+                      <input type="radio" name="q3"
+                        class="radio radio-xs radio-success text-sm md:text-base text-[#1F2933]"
+                        value="Spicy">Spicy</input>
+                    </label>
+
+                  </div>
+                </div>
+                <!-- question4 -->
+                <div class="w-100 item h-80 hidden " answer="Red">
+                  <p class="text-lg md:text-xl font-semibold text-[#1F2933] my-3">
+                    Which of these is a primary color?
+                  </p>
+                  <!-- Answer Options -->
+                  <div class="space-y-3 mb-6">
+
+                    <!-- Option 1 -->
+                    <label
+                      class=" block p-3 border border-[#7AB2B2] bg-white rounded-lg cursor-pointer hover:bg-[#EBF4F6] transition-colors">
+
+                      <input type="radio" name="q4"
+                        class="radio radio-xs radio-success text-sm md:text-base text-[#1F2933]" value="Red">Red</input>
+                    </label>
+
+                    <!-- Option 2 -->
+                    <label
+                      class=" block p-3 border border-[#7AB2B2] bg-white rounded-lg cursor-pointer hover:bg-[#EBF4F6] transition-colors">
+
+                      <input type="radio" name="q4"
+                        class="radio radio-xs radio-success text-sm md:text-base text-[#1F2933]"
+                        value="Purple">Purple</input>
+                    </label>
+
+                    <!-- Option 3 -->
+                    <label
+                      class=" block p-3 border border-[#7AB2B2] bg-white rounded-lg cursor-pointer hover:bg-[#EBF4F6] transition-colors">
+
+                      <input type="radio" name="q4"
+                        class="radio radio-xs radio-success text-sm md:text-base text-[#1F2933]"
+                        value="Orange">Orange</input>
+                    </label>
+                    <!-- Option 4 -->
+                    <label
+                      class=" block p-3 border border-[#7AB2B2] bg-white rounded-lg cursor-pointer hover:bg-[#EBF4F6] transition-colors">
+
+                      <input type="radio" name="q4"
+                        class="radio radio-xs radio-success text-sm md:text-base text-[#1F2933]"
+                        value="Pink">Pink</input>
+                    </label>
+
+                  </div>
+                </div>
+                <!-- question5 -->
+                <div class="w-100 item h-80 hidden " answer="8">
+                  <p class="text-lg md:text-xl font-semibold text-[#1F2933] my-3">
+                    How many legs does a spider have?
+                  </p>
+                  <!-- Answer Options -->
+                  <div class="space-y-3 mb-6 overflow-hidden ">
+
+                    <!-- Option 1 -->
+                    <label
+                      class=" block p-3 border border-[#7AB2B2] bg-white rounded-lg cursor-pointer hover:bg-[#EBF4F6] transition-colors">
+
+                      <input type="radio" name="q5"
+                        class="radio  radio-xs radio-success text-sm md:text-base text-[#1F2933]" value="6">6</input>
+                    </label>
+
+                    <!-- Option 2 -->
+                    <label
+                      class=" block p-3 border border-[#7AB2B2] bg-white rounded-lg cursor-pointer hover:bg-[#EBF4F6] transition-colors">
+
+                      <input type="radio" name="q5"
+                        class="radio radio-xs radio-success text-sm md:text-base text-[#1F2933]" value="8">8</input>
+                    </label>
+
+                    <!-- Option 3 -->
+                    <label
+                      class=" block p-3 border border-[#7AB2B2] bg-white rounded-lg cursor-pointer hover:bg-[#EBF4F6] transition-colors">
+
+                      <input type="radio" name="q5"
+                        class="radio radio-xs radio-success text-sm md:text-base text-[#1F2933]" value="4">4</input>
+                    </label>
+                    <!-- Option 4 -->
+                    <label
+                      class=" block p-3 border border-[#7AB2B2] bg-white rounded-lg cursor-pointer hover:bg-[#EBF4F6] transition-colors">
+
+                      <input type="radio" name="q5"
+                        class="radio radio-xs radio-success text-sm md:text-base text-[#1F2933]" value="10">10</input>
+                    </label>
+
+                  </div>
+                </div>
+                <!-- question6 -->
+                <div class="w-100 item h-80 hidden " answer="Paris">
+                  <p class="text-lg md:text-xl font-semibold text-[#1F2933] my-3">
+                    What is the capital city of France?
+                  </p>
+                  <!-- Answer Options -->
+                  <div class="space-y-3 mb-6">
+
+                    <!-- Option 1 -->
+                    <label
+                      class=" block p-3 border border-[#7AB2B2] bg-white rounded-lg cursor-pointer hover:bg-[#EBF4F6] transition-colors">
+
+                      <input type="radio" name="q6"
+                        class="radio radio-xs radio-success text-sm md:text-base text-[#1F2933]"
+                        value="Berlin">Berlin</input>
+                    </label>
+
+                    <!-- Option 2 -->
+                    <label
+                      class=" block p-3 border border-[#7AB2B2] bg-white rounded-lg cursor-pointer hover:bg-[#EBF4F6] transition-colors">
+
+                      <input type="radio" name="q6"
+                        class="radio radio-xs radio-success text-sm md:text-base text-[#1F2933]"
+                        value="Madrid">Madrid</input>
+                    </label>
+
+                    <!-- Option 3 -->
+                    <label
+                      class=" block p-3 border border-[#7AB2B2] bg-white rounded-lg cursor-pointer hover:bg-[#EBF4F6] transition-colors">
+
+                      <input type="radio" name="q6"
+                        class="radio radio-xs radio-success text-sm md:text-base text-[#1F2933]"
+                        value="Paris">Paris</input>
+                    </label>
+                    <!-- Option 4 -->
+                    <label
+                      class=" block p-3 border border-[#7AB2B2] bg-white rounded-lg cursor-pointer hover:bg-[#EBF4F6] transition-colors">
+
+                      <input type="radio" name="q6"
+                        class="radio radio-xs radio-success text-sm md:text-base text-[#1F2933]"
+                        value="Rome">Rome</input>
+                    </label>
+
+                  </div>
+                </div>
+                <!-- question7 -->
+                <div class="w-100 item h-80 hidden " answer="Mars">
+                  <p class="text-lg md:text-xl font-semibold text-[#1F2933] my-3">
+                    Which planet is known as the "Red Planet"?
+                  </p>
+                  <!-- Answer Options -->
+                  <div class="space-y-3 mb-6">
+
+                    <!-- Option 1 -->
+                    <label
+                      class=" block p-3 border border-[#7AB2B2] bg-white rounded-lg cursor-pointer hover:bg-[#EBF4F6] transition-colors">
+
+                      <input type="radio" name="q7"
+                        class="radio radio-xs radio-success text-sm md:text-base text-[#1F2933]"
+                        value="Earth">Earth</input>
+                    </label>
+
+                    <!-- Option 2 -->
+                    <label
+                      class=" block p-3 border border-[#7AB2B2] bg-white rounded-lg cursor-pointer hover:bg-[#EBF4F6] transition-colors">
+
+                      <input type="radio" name="q7"
+                        class="radio radio-xs radio-success text-sm md:text-base text-[#1F2933]"
+                        value="Mars">Mars</input>
+                    </label>
+
+                    <!-- Option 3 -->
+                    <label
+                      class=" block p-3 border border-[#7AB2B2] bg-white rounded-lg cursor-pointer hover:bg-[#EBF4F6] transition-colors">
+
+                      <input type="radio" name="q7"
+                        class="radio radio-xs radio-success text-sm md:text-base text-[#1F2933]"
+                        value="Jupiter">Jupiter</input>
+                    </label>
+                    <!-- Option 4 -->
+                    <label
+                      class=" block p-3 border border-[#7AB2B2] bg-white rounded-lg cursor-pointer hover:bg-[#EBF4F6] transition-colors">
+
+                      <input type="radio" name="q7"
+                        class="radio radio-xs radio-success text-sm md:text-base text-[#1F2933]"
+                        value="Venus">Venus</input>
+                    </label>
+
+                  </div>
+                </div>
+                <!-- question8 -->
+                <div class="w-100 item h-80 hidden " answer="Pacific Ocean">
+                  <p class="text-lg md:text-xl font-semibold text-[#1F2933] my-3">
+                    What is the largest ocean on Earth?
+                  </p>
+                  <!-- Answer Options -->
+                  <div class="space-y-3 mb-6">
+
+                    <!-- Option 1 -->
+                    <label
+                      class=" block p-3 border border-[#7AB2B2] bg-white rounded-lg cursor-pointer hover:bg-[#EBF4F6] transition-colors">
+
+                      <input type="radio" naq9" class="radio radio-xs radio-success text-sm md:text-base text-[#1F2933]"
+                        value="Atlantic Ocean">Atlantic Ocean</input>
+                    </label>
+
+                    <!-- Option 2 -->
+                    <label
+                      class=" block p-3 border border-[#7AB2B2] bg-white rounded-lg cursor-pointer hover:bg-[#EBF4F6] transition-colors">
+
+                      <input type="radio" naq9" class="radio radio-xs radio-success text-sm md:text-base text-[#1F2933]"
+                        value="Indian Ocean">Indian Ocean</input>
+                    </label>
+
+                    <!-- Option 3 -->
+                    <label
+                      class=" block p-3 border border-[#7AB2B2] bg-white rounded-lg cursor-pointer hover:bg-[#EBF4F6] transition-colors">
+
+                      <input type="radio" naq9" class="radio radio-xs radio-success text-sm md:text-base text-[#1F2933]"
+                        value="Pacific Ocean">Pacific Ocean</input>
+                    </label>
+                    <!-- Option 4 -->
+                    <label
+                      class=" block p-3 border border-[#7AB2B2] bg-white rounded-lg cursor-pointer hover:bg-[#EBF4F6] transition-colors">
+
+                      <input type="radio" naq9" class="radio radio-xs radio-success text-sm md:text-base text-[#1F2933]"
+                        value="Arctic Ocean">Arctic Ocean</input>
+                    </label>
+
+                  </div>
+                </div>
+                <!-- question9 -->
+                <div class="w-100 item h-80 hidden " answer="100°C">
+                  <p class="text-lg md:text-xl font-semibold text-[#1F2933] my-3">
+                    What is the boiling point of water at sea level?
+                  </p>
+                  <!-- Answer Options -->
+                  <div class="space-y-3 mb-6">
+
+                    <!-- Option 1 -->
+                    <label
+                      class=" block p-3 border border-[#7AB2B2] bg-white rounded-lg cursor-pointer hover:bg-[#EBF4F6] transition-colors">
+
+                      <input type="radio" name="q9"
+                        class="radio radio-xs radio-success text-sm md:text-base text-[#1F2933]"
+                        value="50°C">50°C</input>
+                    </label>
+
+                    <!-- Option 2 -->
+                    <label
+                      class=" block p-3 border border-[#7AB2B2] bg-white rounded-lg cursor-pointer hover:bg-[#EBF4F6] transition-colors">
+
+                      <input type="radio" name="q9"
+                        class="radio radio-xs radio-success text-sm md:text-base text-[#1F2933]"
+                        value="100°C">100°C</input>
+                    </label>
+
+                    <!-- Option 3 -->
+                    <label
+                      class=" block p-3 border border-[#7AB2B2] bg-white rounded-lg cursor-pointer hover:bg-[#EBF4F6] transition-colors">
+
+                      <input type="radio" name="q9"
+                        class="radio radio-xs radio-success text-sm md:text-base text-[#1F2933]"
+                        value="75°C">75°C</input>
+                    </label>
+                    <!-- Option 4 -->
+                    <label
+                      class=" block p-3 border border-[#7AB2B2] bg-white rounded-lg cursor-pointer hover:bg-[#EBF4F6] transition-colors">
+
+                      <input type="radio" name="q9"
+                        class="radio radio-xs radio-success text-sm md:text-base text-[#1F2933]"
+                        value="150°C">150°C</input>
+                    </label>
+
+                  </div>
+                </div>
+                <!-- question10 -->
+                <div class="w-100 item h-80 hidden " answer="Triangle">
+                  <p class="text-lg md:text-xl font-semibold text-[#1F2933] my-3">
+                    Which shape has three sides?
+                  </p>
+                  <!-- Answer Options -->
+                  <div class="space-y-3 mb-6">
+
+                    <!-- Option 1 -->
+                    <label
+                      class=" block p-3 border border-[#7AB2B2] bg-white rounded-lg cursor-pointer hover:bg-[#EBF4F6] transition-colors">
+
+                      <input type="radio" name="q10"
+                        class="radio radio-xs radio-success text-sm md:text-base text-[#1F2933]"
+                        value="Square">Square</input>
+                    </label>
+
+                    <!-- Option 2 -->
+                    <label
+                      class=" block p-3 border border-[#7AB2B2] bg-white rounded-lg cursor-pointer hover:bg-[#EBF4F6] transition-colors">
+
+                      <input type="radio" name="q10"
+                        class="radio radio-xs radio-success text-sm md:text-base text-[#1F2933]"
+                        value="Circle">Circle</input>
+                    </label>
+
+                    <!-- Option 3 -->
+                    <label
+                      class=" block p-3 border border-[#7AB2B2] bg-white rounded-lg cursor-pointer hover:bg-[#EBF4F6] transition-colors">
+
+                      <input type="radio" name="q10"
+                        class="radio radio-xs radio-success text-sm md:text-base text-[#1F2933]"
+                        value="Triangle">Triangle</input>
+                    </label>
+                    <!-- Option 4 -->
+                    <label
+                      class=" block p-3 border border-[#7AB2B2] bg-white rounded-lg cursor-pointer hover:bg-[#EBF4F6] transition-colors">
+
+                      <input type="radio" name="q10"
+                        class="radio radio-xs radio-success text-sm md:text-base text-[#1F2933]"
+                        value="Rectangle">Rectangle</input>
+                    </label>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="flex flex-wrap items-center justify-between gap-2 mt-6 pt-4 border-t border-[#7AB2B2]/20">
+
+              <!-- Left Group -->
+
+              <div class="join grid grid-cols-3  overflow-hidden  ">
+                <button id="previous"
+                  class="pointer-events-none opacity-50 join-item text- border border-[#7AB2B2] [border-right:none] cursor-pointer  px-3 py-2 md:px-4 md:py-2 text-sm md:text-base  text-[#088395] hover:bg-[#EBF4F6] transition-colors"
+                  onclick="prev()">Previous</button>
+                <button id="qnum"
+                  class="join-item  px-3 py-2 md:px-4 md:py-2 text-sm md:text-base border border-[#7AB2B2] [border-right:none]  text-[#09637E] font-medium ">1</button>
+                <button id="next"
+                  class=" opacity-100  join-item cursor-pointer  px-3 py-2 md:px-4 md:py-2 text-sm md:text-base  border-[#7AB2B2] bg-[#088395] text-white  hover:bg-[#09637E] transition-colors"
+                  onclick="next()">Next</button>
+              </div>
+
+              <!-- Right Group -->
+              <div class="flex items-center gap-2">
+                <button onclick="mark()"
+                  class="cursor-pointer px-4 py-2 md:px-5 md:py-2 text-sm md:text-base border border-[#FFC107] text-[#FFC107] rounded-lg hover:bg-[#FFC107]/10 transition-colors">
+                  <span class="flex items-center gap-1">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z" />
+                    </svg>
+                    mark
+                  </span>
+                </button>
+
+                <button onclick="submit()"
+                  class=" cursor-pointer px-6 py-2 md:px-8 md:py-2 text-sm md:text-base bg-[#E63946] text-white rounded-lg hover:bg-[#E63946]/90 transition-colors">
+                  submit
+                </button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!----------------marked list ----------------->
+        <div class="w-full md:w-2/5 lg:w-2/5 ">
+          <!-- Marked List Card -->
+          <div class="bg-white rounded-xl shadow-lg p-5 md:p-6 ">
+            <!-- Header with Icon -->
+            <h3 class="text-base md:text-lg font-bold text-[#09637E] mb-4 flex items-center gap-2">
+              Marked Questions
+            </h3>
+            <!-- Marked List -->
+            <div class="space-y-2" id="markedList">
+              <!-- Item 1 -->
+              <div id=""
+                class=" markedItem hidden p-3 bg-[rgba(122,178,178,0.2)] border-l-4 border-[#7AB2B2] rounded-r-lg flex justify-between items-center">
+                <span class="text-sm md:text-base font-medium text-[#1F2933]">mrk-Question <span
+                    id="markQ"></span></span>
+                <button id="" class="markBtn cursor-pointer text-[#E63946] hover:text-[#E63946]/80">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                      d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </section>
+  <script src="tailwind.config.js"></script>
+  <script>
+    // new tab
+    // window.onload=function(){
+    //         setTimeout(function(){
+
+    //            window.location.replace("timeOut.html")
+    //         },10000)
+    //     }
+
+
+    // progressbar
+    var questions = document.querySelectorAll(".item")
+    var progressBar = document.getElementById("progress")
+    var select = document.querySelectorAll('input[type="radio"]')
+    select.forEach(radio => {
+      radio.addEventListener('change', function () {
+        var selected = document.querySelectorAll('input[type="radio"]:checked')
+        selected.forEach(element => {
+          console.log(element.value)
+        })
+        var increase = selected.length * 10
+        progressBar.style.width = increase + "%"
+      })
+    })
+
+    // timer
+    var h = 0
+    var m = 9
+    var s = 59
+    var hours = document.querySelector("#hours")
+    var minutes = document.querySelector("#minutes")
+    var seconds = document.querySelector("#seconds")
+    setInterval(function () {
+
+      if (s > 0) {
+        s--
+      }
+      else if (m > 0) {
+        m--
+        s = 59
+      }
+      else if (h > 0) {
+        h--
+        s = 59
+        m = 59
+      }
+
+      seconds.style = `--value:${s}`
+      minutes.style = `--value:${m}`
+      hours.style = `--value:${h}`
+    }, 1000)
+    //question pagination
+    var btn = document.querySelector("#qnum")
+    var previous = document.querySelector("#previous")
+    var nextt = document.querySelector("#next")
+    var num = 1
+    var div = document.querySelectorAll(".item")
+
+    var array = Array.from(div)
+    var newarray = []
+    var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    numbers.sort(function () {
+      return 0.5 - Math.random()
+    })
+    console.log(numbers)
+
+    for (var j = 0; j < 10; j++) {
+      newarray[numbers[j]] = array[j]
+    }
+    console.log(newarray)
+    var i = 0
+
+    newarray[0].classList.remove("hidden")
+    newarray[0].classList.add("block")
+    function next() {
+      if (i < newarray.length - 1) {
+        i++
+        newarray.forEach(function (element) {
+          element.classList.remove("block")
+          element.classList.add("hidden")
+        });
+        newarray[i].classList.remove("hidden")
+        newarray[i].classList.add("block")
+        btn.textContent = `${i + 1}`
+      }
+      if (i > 0) {
+        previous.classList.remove("opacity-50", "pointer-events-none")
+        previous.classList.add("opacity-100")
+      }
+      else {
+        previous.classList.remove("opacity-100")
+        previous.classList.add("opacity-50", "pointer-events-none")
+      }
+      if (i == 9) {
+        nextt.classList.remove("opacity-100")
+        nextt.classList.add("opacity-50", "pointer-events-none")
+      }
+      else {
+        nextt.classList.remove("opacity-50", "pointer-events-none")
+        nextt.classList.add("opacity-100")
+      }
+    }
+    function prev() {
+
+      if (i > 0) {
+        i--
+        newarray.forEach(function (element) {
+          element.classList.remove("block")
+          element.classList.add("hidden")
+        });
+
+        newarray[i].classList.remove("hidden")
+        newarray[i].classList.add("block")
+        btn.textContent = `${i + 1}`
+
+        console.log(i)
+      }
+      if (i > 0) {
+        previous.classList.remove("opacity-50", "pointer-events-none")
+        previous.classList.add("opacity-100")
+      }
+      else {
+        previous.classList.remove("opacity-100")
+        previous.classList.add("opacity-50", "pointer-events-none")
+      }
+
+      if (i == 9) {
+        nextt.classList.remove("opacity-100")
+        nextt.classList.add("opacity-50", "pointer-events-none")
+      }
+      else {
+        nextt.classList.remove("opacity-50", "pointer-events-none")
+        nextt.classList.add("opacity-100")
+      }
+    }
+    //submit & correction
+    var degree = 0
+    select.forEach(radio => {
+      radio.addEventListener('change', function () {
+        count = 0
+        degree = 0
+        questions.forEach(question => {
+          var correct = question.getAttribute("answer")
+          selected = document.querySelectorAll('input[type="radio"]:checked')
+          selected.forEach(element => {
+            if (selected && element.value == correct)
+
+              degree++
+
+          })
+          sessionStorage.setItem("degree", degree)
+        })
+      })
+
+    })
+    function submit() {
+      window.location.replace("submit.html")
+    }
+    //mark
+    var markedList = document.querySelector("#markedList")
+    var markedItem = document.querySelector(".markedItem")
+    var markQ = document.querySelector("#markQ")
+
+    var markArray = []
+    var markedItems = []
+    
+    function mark() {
+      if (!markArray.some(elment => elment == i)) {
+        markArray.push(i)
+        console.log(markArray)
+        markQ.textContent = `${i + 1}`
+        var j=markQ.textContent 
+        var newItem = markedItem.cloneNode(true)
+        
+        newItem.classList.remove('hidden')
+        newItem.addEventListener("click",function(){
+          console.log("hello")
+          i=j
+          console.log(i)
+          prev()
+        })
+        var markBtn = newItem.querySelector(".markBtn")
+        markBtn.addEventListener("click", function (e) {
+          e.stopPropagation()
+          newItem.remove()
+          markArray.splice(markArray.indexOf(j-1),1)
+          console.log(markArray)
+        })
+        markedList.appendChild(newItem)
+        markedItems.push(newItem)
+        console.log(markedList)
+        console.log(markArray)
+        
+      }
+
+    }
+
+  </script>
+  <script src="script.js"></script>
+</body>
+
+</html>
