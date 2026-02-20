@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>submite</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <section class="py-16 bg-[#EBF4F6] min-h-screen flex items-center">
+        <div class="max-w-6xl mx-auto px-4 w-full">
+            <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 lg:p-10 w-full md:max-w-2xl lg:max-w-3xl mx-auto">
+              
+                <p class="text-sm md:text-base text-[#1F2933] text-center mb-6 md:mb-8">
+                    Your responses have been automatically submitted for grading.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-6 md:mb-8">
+                    <div class="text-center">
+                        <button
+                            class="return w-full cursor-pointer md:w-auto bg-transparent text-[#088395] hover:text-[#09637E] hover:bg-[#09637E]/5 border-1 border-[#088395] font-medium px-6 py-3 md:px-8 md:py-3 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-[#088395]/50">
+                            Return To Home
+                        </button>
+                    </div>
+                    <div class="text-center">
+                        <button
+                            class="result w-full cursor-pointer md:w-auto bg-[#088395] hover:bg-[#09637E] text-white font-medium px-6 py-3 md:px-8 md:py-3 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-[#088395]/50">
+                            Check My Results <!-- using js to go results-->
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <script>
+        var result=document.querySelector(".result")
+        var Return=document.querySelector(".return")
+        var child
+        result.addEventListener("click",function(){
+            // child=open("result.html")
+            location.replace("result.html")
+
+        })
+        Return.addEventListener("click",function(){
+            // child=open("result.html")
+            location.replace("welcome.html")
+
+        })
+    </script>
+    <script src="tailwind.config.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
