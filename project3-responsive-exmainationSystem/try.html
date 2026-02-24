@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DaisyUI Carousel</title>
+    
+ <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="p-10">
+<div class="w-100 h-100 overflow-hidden  ">
+<div id="container" class="w-500  flex  transition-[all] duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]">
+  
+  <div class="hidden item bg-black w-100 h-100">1</div>
+  <div class="hidden item bg-slate-400 w-100 h-100">2</div>
+  <div class="hidden item bg-red-600 black w-100 h-100">3</div>
+  <div class="hidden item bg-amber-300 black w-100 h-100">4</div>
+  <div class="hidden item bg-lime-600 black w-100 h-100">5</div>
+</div>
+</div>
+<button class="p-3 bg-slate-300 rounded-lg cursor-pointer" onclick="prev()">prev</button>
+<button id="btn" class="p-3 bg-slate-300 rounded-lg cursor-pointer" >1</button>
+<button class="p-3 bg-slate-300 rounded-lg cursor-pointer" onclick="next()">next</button>
+
+
+
+
+
+<script>
+  var div=document.querySelectorAll(".item")
+  var btn=document.querySelector("#btn")
+var array=Array.from(div)
+var newarray=[]
+
+var numbers=[0,1,2,3,4]
+numbers.sort(function(){
+  return 0.5-Math.random()
+})
+console.log(numbers)
+
+for(var i=0;i<5;i++){
+  newarray[numbers[i]]=array[i]
+}
+console.log(newarray)
+
+
+var i=0
+newarray[0].classList.remove("hidden")
+newarray[0].classList.add("block")
+function next(){
+   
+  if(i<newarray.length-1){
+    i++
+    newarray.forEach(function(element) {
+    element.classList.remove("block")
+  element.classList.add("hidden")
+  });
+
+  newarray[i].classList.remove("hidden")
+  newarray[i].classList.add("block")
+    btn.textContent=`${i+1}`
+ 
+  console.log(i)
+  }
+}
+function prev(){
+  
+  if(i>0){
+    i--
+    newarray.forEach(function(element) {
+    element.classList.remove("block")
+  element.classList.add("hidden")
+  });
+
+  newarray[i].classList.remove("hidden")
+  newarray[i].classList.add("block")
+    btn.textContent=`${i+1}`
+ 
+  console.log(i)
+  }
+}
+
+
+
+// var container=document.querySelector("#container")
+// var x=0
+// function next(){
+//   if(x>=100){x=100}
+//   else if(x<80) 
+//     {
+//        x +=20
+//     container.style.transform = `translateX(-${x}%)`
+     
+//     }
+// }
+// function prev(){
+//   if(x<=0){x=0}
+//  else if(x>= 0) 
+//     {
+//      x -=20
+//     container.style.transform = `translateX(-${x}%)`
+      
+//     }
+// }
+
+
+
+
+
+
+</script>
+  </body>
+
+</html>

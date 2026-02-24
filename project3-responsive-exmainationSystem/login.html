@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style> body { animation: fadeIn 0.7s ease-in-out; } @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } } </style>
+</head>
+<body>
+    <section class="py-16 bg-[#EBF4F6] min-h-screen flex items-center">
+        <div class="max-w-6xl mx-auto px-4 w-full">
+         <div id="loginContainer" 
+            class="bg-white rounded-xl shadow-lg p-6 md:p-8 lg:p-10 w-full md:max-w-2xl lg:max-w-xl mx-auto">
+                <div class="text-center mb-6 md:mb-8">
+                    <h1 class="text-3xl md:text-4xl lg:text-4xl font-bold text-[#09637E] mb-2">
+                        Welcome Back
+                    </h1>
+                    <p class="text-sm md:text-base text-[#1F2933]/70">
+                        Sign in to access your examination portal
+                    </p>
+                </div>
+               <form id="loginForm" class="space-y-5 md:space-y-6">
+                    
+                       <div>
+                        <input type="email" id="loginEmail" placeholder="Enter your email" oninput="emailValidation()"
+                            class="w-full border border-[#7AB2B2] rounded-lg p-3 md:p-3.5 text-sm md:text-base text-[#1F2933] placeholder:text-[#7AB2B2]/60 focus:outline-none focus:ring-2 focus:ring-[#088395] focus:border-transparent transition-all">
+                        <p id="vaildEmail" class="text-red-500   text-left  text-sm md:text-base pt-1 pl-1 " ></p>
+                            </div>
+                    
+                       <div>
+                        <input type="password" id="loginPassword" placeholder="Enter your password" oninput="passwordValidation()"
+                            class="w-full border border-[#7AB2B2] rounded-lg p-3 md:p-3.5 text-sm md:text-base text-[#1F2933] placeholder:text-[#7AB2B2]/60 focus:outline-none focus:ring-2 focus:ring-[#088395] focus:border-transparent transition-all">
+                    <p id="vaildPassword" class="text-red-500   text-left text-sm md:text-base pt-1 pl-1 " ></p>
+                   </div>
+                    <button type="submit" 
+                        class="login w-full bg-[#088395] cursor-pointer hover:bg-[#09637E] text-white font-medium px-6 py-3 md:py-3.5 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-[#088395]/50">
+                        Login
+                    </button>
+                       <p class="text-center text-sm text-[#1F2933]/70">
+            Don't have an account?
+            <a href="signup.html" class="text-[#088395] hover:underline font-medium">Sign Up</a>
+          </p>
+
+                    <div class="flex items-center justify-center gap-3 text-xs md:text-sm">
+                        <a href="https://accounts.google.com"
+                            class="font-medium text-[#088395] hover:text-[#09637E] hover:underline transition-colors">
+                            Forgot Password?
+                        </a>
+                        <span class="text-[#7AB2B2]">•</span>
+                        <a href="welcome.html"
+                            class="font-medium text-[#088395] hover:text-[#09637E] hover:underline transition-colors">
+                            Back to Welcome
+                        </a>
+                    </div>
+                    <div class="text-center pt-2">
+                        <p class="text-xs md:text-sm text-[#64748B]">
+                            Need help?
+                            <a href="mailto:amenakerir@gmail.com"
+                                class="font-medium text-[#088395] hover:text-[#09637E] hover:underline transition-colors">
+                                Contact Support
+                            </a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="Js/LogIn.js">
+    </script>
+    <script src="Js/tailwind.config.js"></script>
+
+</body>
+
+</html>
