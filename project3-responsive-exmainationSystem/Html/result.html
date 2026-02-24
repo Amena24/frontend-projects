@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style> body { animation: fadeIn 0.7s ease-in-out; } @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } } </style>
+    <title>result</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <section class="py-16 bg-[#EBF4F6] min-h-screen flex items-center">
+        <div class="max-w-xl mx-auto px-4 w-full">
+            <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 lg:p-10 w-full md:max-w-2xl lg:max-w-2xl mx-auto">
+                <div class="text-center mb-6 md:mb-8">
+                    <h2 class="text-2xl md:text-3xl lg:text-3xl font-bold text-[#09637E]">
+                        Grades
+                    </h2>
+                    <!-- Student Name -->
+                    <h3 id="userName" class="text-xl md:text-2xl lg:text-2xl  text-[#1F2933] mt-4"></h3>
+                </div>
+                <div class="text-center mb-4">
+                    <!-- Success Icon -->
+                    <div
+                        class="success1 w-16 h-16 md:w-20 md:h-20 bg-[#2CB67D]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 md:w-10 md:h-10 text-[#2CB67D]" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <!--congratulation-->
+                    <p class="success2 text-xl md:text-2xl lg:text-3xl font-semibold text-[#2CB67D] mb-2">
+                        Congratulations
+                    </p>
+                    <!-- fail Icon -->
+                    <div
+                        class="fail1 hidden w-16 h-16 md:w-20 md:h-20  bg-[#E63946]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            class="w-8 h-8 md:w-10 md:h-10 text-[#E63946]">
+                            <path fill-rule="evenodd"
+                                d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <!-- faild -->
+                    <p class=" fail2 hidden text-xl md:text-2xl lg:text-3xl font-semibold text-[#E63946] mb-2">
+                        Unsuccessful
+                    </p>
+                </div>
+                <!-- Score Circle / Display -->
+                <div class="flex flex-col items-center justify-center my-6 md:my-8">
+                    <span class="text-5xl md:text-6xl lg:text-7xl font-bold text-[#09637E]" id="myDegree">85%</span>
+                    <button
+                        class=" text-center [align-self:flex-end] mt-10  cursor-pointer md:w-auto bg-[#088395] hover:bg-[#09637E] text-white font-medium px-8 py-3 md:px-10 md:py-3.5 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-[#088395]/50">
+                        Finish
+                    </button>
+
+
+                </div>
+
+
+            </div>
+    </section>
+    <script src="script.js"></script>
+    <script>
+        if(localStorage.getItem("isLoggedIn") !== "true"){
+    window.location.href = "welcome.html";
+}
+        var btn = document.querySelector("button")
+         var userName = document.querySelector("#userName")
+        const userDataString = localStorage.getItem('currentUser');
+        const userData = JSON.parse(userDataString);
+        var formattedFirstName = userData.firstName.charAt(0).toUpperCase() + userData.firstName.slice(1).toLowerCase();
+var formattedLastName = userData.lastName.charAt(0).toUpperCase() + userData.lastName.slice(1).toLowerCase();
+
+
+    
+        btn.addEventListener("click", function () {
+            sessionStorage.clear()
+            window.location.replace("welcome.html")
+            localStorage.setItem("isLoggedIn","false")
+
+        })
+        var fail1 = document.querySelector(".fail1")
+        var fail2 = document.querySelector(".fail2")
+        var success1 = document.querySelector(".success1")
+        var success2 = document.querySelector(".success2")
+        var myDegree = document.querySelector("#myDegree")
+
+        var degree = sessionStorage.getItem("degree", degree)
+        myDegree.textContent = `${degree * 10}%`
+        if (degree < 5) {
+            success1.classList.add("hidden")
+            success2.classList.add("hidden")
+            fail1.classList.remove("hidden")
+            fail2.classList.remove("hidden")
+            userName.innerHTML = `<b>${formattedFirstName}</b> <b>${formattedLastName}</b>,Better luck next time.`
+        }
+        else if (degree >= 5) {
+            fail1.classList.add("hidden")
+            fail2.classList.add("hidden")
+            success1.classList.remove("hidden")
+            success2.classList.remove("hidden")
+            userName.innerHTML = `&#127881; <b>${formattedFirstName} ${formattedLastName}</b>, You passed! &#127881;`;
+        }
+
+    </script>
+
+    <script src="/Js/tailwind.config.js"></script>
+
+</body>
+
+</html>
