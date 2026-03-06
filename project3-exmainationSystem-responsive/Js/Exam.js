@@ -196,8 +196,9 @@ function saveAnswer(){
     function submit() {
       saveAnswer()
       localStorage.setItem("answers",JSON.stringify(answer))
+        var child = window.open("result.html")  
       window.close()
-      var child = window.open("result.html")  
+      
     }
 // ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //     function calculateResult() {
@@ -291,4 +292,5 @@ function saveAnswer(){
       }
 
     }
+
 
