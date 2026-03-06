@@ -1,6 +1,6 @@
 
 const loginContainer = document.getElementById("loginContainer");
-const isLoggedIn = localStorage.getItem("isLoggedIn");
+const isLoggedIn = sessionStorage.getItem("isLoggedIn");
 var email1 = document.getElementById("loginEmail")
 var vaildEmail = document.querySelector("#vaildEmail")
 var vaildPassword = document.querySelector("#vaildPassword")
@@ -157,4 +157,5 @@ function showAlreadyLoggedInUI(){
             localStorage.removeItem("currentUser");
             window.location.reload();
         });
+
 }
