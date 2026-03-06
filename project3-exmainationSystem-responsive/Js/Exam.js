@@ -1,14 +1,3 @@
-
-
-    // new tab
-    // window.onload=function(){
-    //         setTimeout(function(){
-
-    //            window.location.replace("timeOut.html")
-    //         },10000)
-    //     }
-
-
 if(sessionStorage.getItem("isLoggedIn") !== "true"){
     window.location.replace("welcome.html");
 }
@@ -61,7 +50,7 @@ if(sessionStorage.getItem("isLoggedIn") !== "true"){
      localStorage.setItem("answers",JSON.stringify(answer))
      window.location.replace("timeOut.html")
    }
-    }, 10)
+    }, 1000)
 //    ////////////////////////////////////////////////////////////////////////////////////////
     //question pagination
     var btn = document.querySelector("#qnum")
@@ -289,4 +278,5 @@ function saveAnswer(){
       }
 
     }
+
 
