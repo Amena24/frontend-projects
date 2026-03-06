@@ -58,7 +58,7 @@ if(sessionStorage.getItem("isLoggedIn") !== "true"){
    if (h === 0 && m === 0 && s === 0) {
       clearInterval(timer);
      
-     window.location.replace("timeout.html")
+     window.location.replace("timeOut.html")
     
     
    }
@@ -290,4 +290,5 @@ function saveAnswer(){
       }
 
     }
+
 
