@@ -263,20 +263,22 @@ function saveAnswer(){
 });
 // ////////////////////////////////////////////////////////////////////////////////////////////////
 
-        var markBtn = newItem.querySelector(".markBtn")
+       var markBtn = newItem.querySelector(".markBtn")
         markBtn.addEventListener("click", function (e) {
+          var markQ=newItem.querySelector("#markQ")
           e.stopPropagation()
           newItem.remove()
-          markArray.splice(markArray.indexOf(i),1)
+          markArray.splice(markArray.indexOf(markQ.textContent-1),1)
           console.log(markArray)
         })
         markedList.appendChild(newItem)
         markedItems.push(newItem)
-        console.log(markedList)
-        console.log(markArray)
+        // console.log(markedList)
+        // console.log(markArray)
         
       }
 
     }
+
 
 
